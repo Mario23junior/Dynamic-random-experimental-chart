@@ -1,0 +1,18 @@
+name: Dynamic-random-experimental-chart
+
+on:
+  push:
+    branches:
+    - main
+    - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+        check-latest: true
