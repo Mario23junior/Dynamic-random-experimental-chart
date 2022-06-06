@@ -18,21 +18,21 @@ public class CreateContent {
 	
 	public Parent createContent() {
 		Pane root = new Pane();
-		root.setPrefSize(900, 600);
+		root.setPrefSize(800, 600);
 		
 		Canvas canvas = new Canvas(800,600);
 		GraphicsContext ImageComander = canvas.getGraphicsContext2D();
 		
-		charts.add(new CanvasLineChart(ImageComander, Color.LAVENDER, new RandomDataSource()));
+		charts.add(new CanvasLineChart(ImageComander, Color.ORANGE, new RandomDataSource()));
 		charts.add(new CanvasLineChart(ImageComander, Color.BISQUE, new RandomDataSource()));
-		charts.add(new CanvasLineChart(ImageComander, Color.AQUAMARINE, new RandomDataSource()));
-		charts.add(new CanvasLineChart(ImageComander, Color.GREEN ,() -> Math.random() * 2.4));
+		charts.add(new CanvasLineChart(ImageComander, Color.RED, new RandomDataSource()));
+		charts.add(new CanvasLineChart(ImageComander, Color.GREEN ,() -> Math.random() * 0.3));
 
 		
 		AnimationTimer timer = new AnimationTimer() {
 			@Override
 			public void handle(long arg0) {
-				ImageComander.clearRect(0, 0, 900, 600);
+				ImageComander.clearRect(0, 0, 800, 600);
 				charts.forEach(charts -> charts.updates());
 			}
 		};

@@ -11,9 +11,9 @@ public class MainGraficDynam extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 	   CreateContent create = new CreateContent();   
-       stage.setScene(new Scene(create.createContent())); 		
+       stage.setScene(new Scene(create.createContent()));
+       stage.show();
 	}
-
 	public static void main(String[] args) {
 		launch(args);
 	}
