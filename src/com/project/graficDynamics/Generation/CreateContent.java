@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 public class CreateContent {
    
 	private List<CanvasLineChart> charts = new ArrayList<>();
+	private Double timeRum = 0.0;
 	
 	public Parent createContent() {
 		Pane root = new Pane();
@@ -32,8 +33,15 @@ public class CreateContent {
 		AnimationTimer timer = new AnimationTimer() {
 			@Override
 			public void handle(long arg0) {
-				ImageComander.clearRect(0, 0, 800, 600);
-				charts.forEach(charts -> charts.updates());
+				timeRum += 0.16;
+				
+				if(timeRum > 1) {					
+					ImageComander.clearRect(0, 0, 800, 600);
+					charts.forEach(charts -> charts.updates());
+					
+					timeRum = 0.2;
+				}
+				
 			}
 		};
 		timer.start();
