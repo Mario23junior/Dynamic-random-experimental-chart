@@ -18,11 +18,10 @@ public class CreateContent {
 		AnimationTimer timer = new AnimationTimer() {
 			
 			@Override
-			public void handle(long arg0) {
-				// TODO Auto-generated method stub
-				
+			public void handle(long arg0) {				
 			}
 		};
+		timer.start();
 		root.getChildren().add(canvas);
 		return root;
  	}
