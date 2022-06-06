@@ -1,5 +1,5 @@
 
-<p align="center"><img src="fundo/logo.jpg" height="500" width="900"></p>
+<p align="center"><img src="fundo/fundo.png" height="400" width="700"></p>
 
 <h1 align="center">Dynamic random experimental chart</h1>
 
