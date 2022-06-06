@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
 public class CreateContent {
    
@@ -19,11 +20,12 @@ public class CreateContent {
 		Pane root = new Pane();
 		root.setPrefSize(900, 600);
 		
-		Canvas canvas = new Canvas();
+		Canvas canvas = new Canvas(800,600);
 		GraphicsContext ImageComander = canvas.getGraphicsContext2D();
+		charts.add(new CanvasLineChart(ImageComander, Color.LAVENDER, new RandomDataSource()));
+		
 		
 		AnimationTimer timer = new AnimationTimer() {
-			
 			@Override
 			public void handle(long arg0) {
 				ImageComander.clearRect(0, 0, 900, 600);
