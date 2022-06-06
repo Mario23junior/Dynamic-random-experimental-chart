@@ -21,5 +21,3 @@ Em seguida execute o JAR normalmente
 ```
 java -jar GraficDynamics.jar
 ```
-
-## Logo ira ver o lindo planeta vermelho.
