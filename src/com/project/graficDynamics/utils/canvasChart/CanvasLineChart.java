@@ -19,5 +19,9 @@ public class CanvasLineChart {
 	}
 	
 	
+	public void updates() {
+		
+	}
+	
 	
 }
