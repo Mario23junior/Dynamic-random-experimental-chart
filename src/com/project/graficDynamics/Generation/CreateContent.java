@@ -24,10 +24,9 @@ public class CreateContent {
 		Canvas canvas = new Canvas(800,600);
 		GraphicsContext ImageComander = canvas.getGraphicsContext2D();
 		
-		charts.add(new CanvasLineChart(ImageComander, Color.ORANGE, new RandomDataSource()));
-		charts.add(new CanvasLineChart(ImageComander, Color.BISQUE, new RandomDataSource()));
 		charts.add(new CanvasLineChart(ImageComander, Color.RED, new RandomDataSource()));
-		charts.add(new CanvasLineChart(ImageComander, Color.GREEN ,() -> Math.random() * 0.3));
+		charts.add(new CanvasLineChart(ImageComander, Color.GREEN, new RandomDataSource()));
+ 		charts.add(new CanvasLineChart(ImageComander, Color.BLUE ,() -> Math.random() * 0.3));
 
 		
 		AnimationTimer timer = new AnimationTimer() {
