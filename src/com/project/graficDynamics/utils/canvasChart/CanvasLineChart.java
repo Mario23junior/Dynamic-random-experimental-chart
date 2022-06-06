@@ -37,7 +37,7 @@ public class CanvasLineChart {
 		}
 
 		// Renderizando
-		g.setLineWidth(2.4);
+		g.setLineWidth(2.1);
 		g.setStroke(color);
 		
 		buffer.forEach(y -> {
