@@ -25,8 +25,8 @@ public class CreateContent {
 		GraphicsContext ImageComander = canvas.getGraphicsContext2D();
 		
 		charts.add(new CanvasLineChart(ImageComander, Color.RED, new RandomDataSource()));
-		//charts.add(new CanvasLineChart(ImageComander, Color.GREEN, new RandomDataSource()));
- 		//charts.add(new CanvasLineChart(ImageComander, Color.BLUE ,() -> Math.random() * 0.3));
+		charts.add(new CanvasLineChart(ImageComander, Color.GREEN, new RandomDataSource()));
+ 		charts.add(new CanvasLineChart(ImageComander, Color.BLUE ,() -> Math.random() * 0.3));
 
 		
 		AnimationTimer timer = new AnimationTimer() {
@@ -35,10 +35,10 @@ public class CreateContent {
 				timeRum += 0.16;
 
 				if(timeRum > 1) {					
-					ImageComander.clearRect(0, 0, 800, 600);
+					ImageComander.clearRect(0, 0, 1000, 600);
 					charts.forEach(charts -> charts.updates());
 					
-					ImageComander.setStroke(Color.BLACK);
+					ImageComander.setStroke(Color.WHITE);
  					for (int y = 0; y < 600; y += 100) {
  						ImageComander.strokeLine(0, y, 800,y);
  					}
